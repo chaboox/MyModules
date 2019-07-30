@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<openerp>
+    <data>
+        <template id="print_modify" inherit_id="sale.report_sale_order">
+            <xpath expr="/*" position="replace">
+                         <openerp>
+    <data>
+        <report
+            id="report_sale_order"
+            string="Quotation / Order"
+            model="sale.order"
+            report_type="qweb-pdf"
+            file="sale.report_saleorder"
+            name="sale.report_saleorder"
+            menu="False"
+        />
+    </data>
+</openerp>
+            </xpath>
+        </template>
+    </data>
+</openerp>

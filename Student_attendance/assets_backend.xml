@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+<template id="assets_backend" name="mymodule css assets" inherit_id="web.assets_backend">
+
+            <xpath expr="." position="inside">
+
+                <link rel="stylesheet" href="/Student_attendance/static/boostrap.css"/>
+            </xpath>
+        </template>
+    </data>
+
+</openerp>

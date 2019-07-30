@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+<template id="report_studentattendancelist">
+    <t t-call="report.html_container">
+        <t t-foreach="docs" t-as="o">
+            <t t-call="report.internal_layout">
+                <div class="page">
+                    <div class="oe_structure"/>
+                    <div>
+                       <!-- <span t-field="o.image" t-field-options='{"widget": "image"}'/> -->
+                        <br><br><br><br><br><br></br></br></br></br></br></br>
+                        <strong><center>Attendance report of <span t-field="o.name"/></center></strong><hr/>
+                        <table class="table table-bordered">
+                            <tr>
+                                <td class="text-center">
+                                    <strong>Month</strong>
+                                </td>
+                                <td class="text-center">
+                                    <span t-field="o.month"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">
+                                    <strong>Total Attendance</strong>
+                                </td>
+                                <td class="text-center">
+                                    <span t-field="o.total"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">
+                                    <strong>Presence</strong>
+                                </td>
+                                <td class="text-center">
+                                    <span t-field="o.presence"/>
+                                </td>
+                            </tr>
+
+                        </table>
+
+                          <strong><center>Teachers of  <span t-field="o.name"/></center></strong><hr/>
+                        <table class="table table-bordered">
+                            <t t-foreach="o.teacher_ids" t-as="teac">
+                            <tr>
+
+                                <td class="text-center">
+                                    <span t-field="teac.name"/>
+                                </td>
+
+                                 <td class="text-center">
+                                    <span t-field="teac.module"/>
+                                </td>
+                            </tr>
+                            </t>
+
+
+                        </table>
+                    </div>
+                 </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</data>
+</openerp>

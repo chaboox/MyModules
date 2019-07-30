@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+<record id="view_sale_order_custom" model="ir.ui.view">
+<field name="name">sale.order.custom.form.inherited</field>
+     <field name="model">sale.order</field>
+     <field name="inherit_id" ref="sale.view_order_form"/>
+     <field name="arch" type="xml">
+          <xpath expr="//field[@name='amount_total']" position="replace">
+             <!--  <field name="total_text"/>-->
+              <field name="amount_total" nolabel="1" class="oe_subtotal_footer_separator" widget='monetary' options="{'currency_field': 'currency_id'}"/>
+              <groupe/><group class="oe_subtotal_footer oe_right" colspan="4" name="sale_total">
+                 <field name="total_text"/>
+                            </group>
+          </xpath>
+     </field>
+</record>
+           </data>
+</openerp>

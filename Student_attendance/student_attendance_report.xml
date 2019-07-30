@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+		<report 
+            id="action_report_student_attendance"
+            model="student.attendance"
+            string="Attendance Report"
+            report_type="qweb-pdf"
+            file="Student_attendance.report_studentattendancelist"
+            name="Student_attendance.report_studentattendancelist"
+            menu="False"
+        />
+       </data>
+</openerp>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+          <!--
+         director Attendance
+        -->
+
+        <record id="director_attendance_form_view" model="ir.ui.view">
+            <field name="name">director.attendance.form</field>
+            <field name="model">director.attendance</field>
+
+            <field name="arch" type="xml">
+                <form string="Attendance List">
+                    <sheet>
+                        <group>
+                            <field name="name" required="1"/>
+                            <field name="nameschool" required="1"/>
+                            <field name = "comment"/>
+
+                        </group>
+
+
+
+
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="director_attendance_tree_view" model="ir.ui.view">
+            <field name="name">director.attendance.tree</field>
+            <field name="model">director.attendance</field>
+            <field name="arch" type="xml">
+                <tree string="Attendance List">
+                    <field name="name"/>
+
+                </tree>
+            </field>
+        </record>
+        <record id="director_attendance_action_form" model="ir.actions.act_window">
+            <field name="name">Attendance</field>
+            <field name="res_model">director.attendance</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{}</field>
+        </record>
+
+         <menuitem name="Report Demo"
+                    id="report_demo"
+                    />
+
+         <menuitem name="director Attendance"
+                    id="director_attendance"
+                  parent="student"
+                    action="director_attendance_action_form"
+                    />
+        <!--End of director Attendance -->
+    </data>
+</openerp>
